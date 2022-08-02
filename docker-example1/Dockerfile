@@ -1,0 +1,9 @@
+FROM ubuntu
+MAINTAINER Awadhesh Pratap Singh
+RUN apt-get update
+RUN apt-get install apache2 -y
+ADD . /var/www/html
+ENTRYPOINT apachectl -D FOREGROUND
+ENV port 8080
+
+
